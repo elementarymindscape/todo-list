@@ -5,6 +5,7 @@
 
 
     toDoButton.addEventListener('click', createToDo)
+    toDoList.addEventListener('click', deleteCheckToDo )
 
 
     function createToDo(e) {
@@ -30,4 +31,19 @@
 
         toDoList.appendChild(toDoDiv);
         toDoInput.value="";
+    }
+
+    function deleteCheckToDo(e){
+        const toDoItem = e.target;
+        if ( toDoItem.classList[0] === 'delete-button'){
+            const todo = toDoItem.parentElement;
+            todo.remove();
+        }
+
+        if (item.classList[0] === "complete-btn") {
+            const todo = item.parentElement;
+            todo.classList.toggle("completed");
+            console.log(todo);
+          }
+
     }
