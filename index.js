@@ -1,14 +1,20 @@
     const toDoInput = document.querySelector('.Input');
     const toDoButton = document.querySelector('.Button');
     const toDoList = document.querySelector('.List');
-    // const filterAllToDo = document.querySelector('.all-tasks')
-    const filterLow = document.querySelector('.low-button');
+    const filterAllToDo = document.querySelector('.all-tasks');
+    const filterLowToDo = document.querySelector('.low-button');
+    const filterMediumToDo = document.querySelector('.medium-button');
+    const filterHighToDo = document.querySelector('.high-button');
+    const filterCompletedToDo = document.querySelector('.completed-btn');
 
 
     toDoButton.addEventListener('click', createToDo);
     toDoList.addEventListener('click', deleteCheckToDo);
-    // filterAllToDo.addEventListener('click', filterAll);
-    filterLow.addEventListener('click', filterLowToDo);
+    filterAllToDo.addEventListener('click', filterAll);
+    filterLowToDo.addEventListener('click', filterLow);
+    filterMediumToDo.addEventListener('click', filterMedium);
+    filterHighToDo.addEventListener('click', filterHigh);
+    filterCompletedToDo.addEventListener('click', filterCompleted);
     
 
 
@@ -60,21 +66,73 @@
           }
     }
 
-    function filterLowToDo(e){
+    function filterAll(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "all": todo.style.display = "flex";
+                break;
+            }
+        });
+    }
+
+    function filterLow(e){
         const todos = toDoList.childNodes;
         console.log(todos);
         todos.forEach(function(todo){
             switch(e.target.value){
                 case "low": if(todo.classList.contains("low")){
-                    todo.style.display = "flex";
-                }
-                else{
-                    todo.style.display = "none";
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
                 }
             }
         });
-
     }
+
+    function filterMedium(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "medium": if(todo.classList.contains("medium")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+            }
+        });
+    }
+
+    function filterHigh(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "high": if(todo.classList.contains("high")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+            }
+        });
+    }
+
+    function filterCompleted(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "completed": if(todo.classList.contains("completed")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+            }
+        });
+    }
+
 
 
 

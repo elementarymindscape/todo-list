@@ -123,7 +123,7 @@
             margin-top: 1rem;
         }
 
-        .low-button, .medium-button, .high-button, .all-tasks{
+        .low-button, .medium-button, .high-button, .all-tasks, .completed-btn{
             padding: 0.5rem;
             font-size: 1rem;
             background-color: white;
@@ -143,7 +143,7 @@
         background-color: #ffbf00;
      }
 
-    .high-button:hover{
+        .high-button:hover{
         color: #fff ;
         background-color: red;
         }
