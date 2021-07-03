@@ -1,18 +1,22 @@
     const toDoInput = document.querySelector('.Input');
     const toDoButton = document.querySelector('.Button');
     const toDoList = document.querySelector('.List');
+    // const filterAllToDo = document.querySelector('.all-tasks')
+    const filterLow = document.querySelector('.low-button');
 
 
-
-    toDoButton.addEventListener('click', createToDo)
-    toDoList.addEventListener('click', deleteCheckToDo )
+    toDoButton.addEventListener('click', createToDo);
+    toDoList.addEventListener('click', deleteCheckToDo);
+    // filterAllToDo.addEventListener('click', filterAll);
+    filterLow.addEventListener('click', filterLowToDo);
+    
 
 
     function createToDo(e) {
         e.preventDefault();
 
         const toDoDiv = document.createElement('div');
-        toDoDiv.classList.add("to-do");
+        toDoDiv.classList.add("toDo");
 
         const newToDo = document.createElement('li');
         newToDo.innerText = toDoInput.value;
@@ -28,6 +32,12 @@
         deleteButton.innerHTML = ' <i class="fas fa-trash"></i> ';
         deleteButton.classList.add('delete-button');
         toDoDiv.appendChild(deleteButton);
+
+        var select = document.getElementById('todos');
+        alert(select.options[select.selectedIndex].value);
+
+        var value = select.options[select.selectedIndex].value;
+        toDoDiv.classList.add(value);
 
         toDoList.appendChild(toDoDiv);
         toDoInput.value="";
@@ -49,3 +59,23 @@
             console.log(todo);
           }
     }
+
+    function filterLowToDo(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "low": if(todo.classList.contains("low")){
+                    todo.style.display = "flex";
+                }
+                else{
+                    todo.style.display = "none";
+                }
+            }
+        });
+
+    }
+
+
+
+ 
