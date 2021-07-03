@@ -1,20 +1,12 @@
     const toDoInput = document.querySelector('.Input');
     const toDoButton = document.querySelector('.Button');
     const toDoList = document.querySelector('.List');
-    const filterAllToDo = document.querySelector('.all-tasks');
-    const filterLowToDo = document.querySelector('.low-button');
-    const filterMediumToDo = document.querySelector('.medium-button');
-    const filterHighToDo = document.querySelector('.high-button');
-    const filterCompletedToDo = document.querySelector('.completed-btn');
+    const filter = document.querySelector('.filter-buttons');
 
 
     toDoButton.addEventListener('click', createToDo);
     toDoList.addEventListener('click', deleteCheckToDo);
-    filterAllToDo.addEventListener('click', filterAll);
-    filterLowToDo.addEventListener('click', filterLow);
-    filterMediumToDo.addEventListener('click', filterMedium);
-    filterHighToDo.addEventListener('click', filterHigh);
-    filterCompletedToDo.addEventListener('click', filterCompleted);
+   filter.addEventListener('click', filterAllToDos)
     
 
 
@@ -29,6 +21,13 @@
         newToDo.classList.add("toDo-Item");
         toDoDiv.appendChild(newToDo);
 
+        var select = document.getElementById('todos');
+        alert(select.options[select.selectedIndex].value);
+        var value = select.options[select.selectedIndex].value;
+        toDoDiv.classList.add(value);
+
+        saveToDos(toDoInput.value, value);
+
         const completeButton = document.createElement("button");
         completeButton.innerHTML = ' <i class="fas fa-check"></i> '
         completeButton.classList.add('complete-button');
@@ -38,12 +37,6 @@
         deleteButton.innerHTML = ' <i class="fas fa-trash"></i> ';
         deleteButton.classList.add('delete-button');
         toDoDiv.appendChild(deleteButton);
-
-        var select = document.getElementById('todos');
-        alert(select.options[select.selectedIndex].value);
-
-        var value = select.options[select.selectedIndex].value;
-        toDoDiv.classList.add(value);
 
         toDoList.appendChild(toDoDiv);
         toDoInput.value="";
@@ -133,6 +126,51 @@
         });
     }
 
+    function filterAllToDos(e){
+        const todos = toDoList.childNodes;
+        console.log(todos);
+        todos.forEach(function(todo){
+            switch(e.target.value){
+                case "all": todo.style.display = "flex";
+                break;
+                case "low": if(todo.classList.contains("low")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+                break;
+                case "medium": if(todo.classList.contains("medium")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+                break;
+                case "high": if(todo.classList.contains("high")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+                break;
+                case "completed": if(todo.classList.contains("completed")){
+                    todo.style.display = "flex"
+                }else{
+                    todo.style.display = "none"
+                }
+                break;
+            }
+        });
+    }
+
+    // function saveToDos(task ,priority){
+    //     let todos;
+    //     if(localStorage.getItem('todos') === null){
+    //         todos = [];
+    //     }else{
+    //         todos = JSON.parse(localStorage.getItem("todos"));
+    //     }
+    //     todos.push(task, priority);
+    //     localStorage.setItem("todos", JSON.stringify(todos));
+    // }
 
 
 
