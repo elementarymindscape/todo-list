@@ -19,10 +19,23 @@
     <form>
         <input type="text" class="Input">
         <button type="submit" class="Button">Save</button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+    
     </form>
-
     <div class="container">
         <ul class="List"></ul>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="low-button" >Low</button>
+        <button class="medium-button">Medium</button>
+        <button class="high-button">High</button>
     </div>
 
     <script src="index.js"></script>

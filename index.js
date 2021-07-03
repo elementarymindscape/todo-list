@@ -37,13 +37,15 @@
         const toDoItem = e.target;
         if ( toDoItem.classList[0] === 'delete-button'){
             const todo = toDoItem.parentElement;
-            todo.remove();
+            todo.classList.add('deleteAnim');
+            todo.addEventListener('transitionend', function(){
+                todo.remove();
+            });
         }
 
-        if (item.classList[0] === "complete-btn") {
-            const todo = item.parentElement;
+        if (toDoItem.classList[0] === "complete-button") {
+            const todo = toDoItem.parentElement;
             todo.classList.toggle("completed");
             console.log(todo);
           }
-
     }

@@ -1,90 +1,172 @@
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body{
-        background-image: linear-gradient(120deg, #ff0, #0ff);
-        color: #f00;
-        min-height: 100vh;
-        font-family: "Cairo", sans-serif;
+        body{
+            background-image: linear-gradient(120deg, #ff0, #0ff);
+            color: #f00;
+            min-height: 100vh;
+            font-family: "Cairo", sans-serif;
 
-    }   
+        }   
 
-    header{
-        font-family: "Otomanopee One", sans-serif;
-        font-size: 2rem;
-    }
+        header{
+            font-family: "Otomanopee One", sans-serif;
+            font-size: 2rem;
+        }
 
-    header, form{
-        min-height: 20vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        header, form{
+            min-height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    form input, form button{
-        padding: 0.5rem;
-        font-size: 1.5rem;
-        background-color: white;
-        border: none;
-    }
-     
-    form button{
-        color: black;
-        background: white;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
+        form input, form button{
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            background-color: white;
+            border: none;
+        }
 
-    form button:hover{
-        color: black;
-        background: #cfccca;
-    }
+        form button{
+            color: black;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
 
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        form button:hover{
+            color: black;
+            background: #cfccca;
+        }
 
-    .List{
-        min-width: 30%;
-        list-style: none;
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    }
+        .List{
+            min-width: 30%;
+            list-style: none;
 
-    .to-do{
-        margin: 0.5rem;
-        background: white;
-        color: black;
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        }
 
-    .to-do li{
-        flex: 1;
-    }
+        .to-do{
+            margin: 0.5rem;
+            background: white;
+            color: black;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
 
-    .complete-button, .delete-button{
-        color: white;
-        border: none;
-        padding: 1rem;
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
+        .to-do li{
+            flex: 1;
+        }
 
-    .complete-button{
-        background-color: #f00;
-    }
+        .complete-button, .delete-button{
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
 
-    .toDo-Item{
-        padding: 0rem 0.5rem;
-    }
+        .delete-button{
+            color: black;
+        }
 
-    .fa-check, .fa-trash{
-        pointer-events: none;
-    }
+        .complete-button{
+            color: white;
+            background-color: #f00;
+        }
+
+        .toDo-Item{
+            padding: 0rem 0.5rem;
+        }
+
+        .fa-check, .fa-trash{
+            pointer-events: none;
+        }
+
+        .completed{
+            text-decoration: line-through;
+            opacity: 0.4;
+        }
+
+        .deleteAnim{
+            transform: translateY(80vh) rotateZ(30deg);
+            opacity: 0.4;
+        }
+
+        .filter-buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .low-button, .medium-button, .high-button{
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: white;
+            border: none;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+       .low-button:hover{
+           color: #fff;
+           background-color: #0f0;
+       }
+
+       .medium-button:hover{
+        color: #fff;
+        background-color: #ffbf00;
+     }
+
+    .high-button:hover{
+        color: #fff ;
+        background-color: red;
+        }
+
+        select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            outline: none;
+            border: none;
+        }
+
+        .select{
+            margin: 1rem;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        select{
+            cursor: pointer;
+            width: 8rem;
+            padding: 1rem;
+        }
+
+        .select::after{
+            background: #ff0;
+            color: black;
+            content: "\25BC";
+            position: absolute;
+            top: -4px;
+            right: 0;
+            padding: 0.8rem;
+            pointer-events: none;
+        }
+
+        .select:hover::after{
+            background: #cfccca;  
+        }
