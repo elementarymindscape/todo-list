@@ -22,11 +22,8 @@
         toDoDiv.appendChild(newToDo);
 
         var select = document.getElementById('todos');
-        alert(select.options[select.selectedIndex].value);
         var value = select.options[select.selectedIndex].value;
         toDoDiv.classList.add(value);
-
-        saveToDos(toDoInput.value, value);
 
         const completeButton = document.createElement("button");
         completeButton.innerHTML = ' <i class="fas fa-check"></i> '
@@ -59,72 +56,6 @@
           }
     }
 
-    function filterAll(e){
-        const todos = toDoList.childNodes;
-        console.log(todos);
-        todos.forEach(function(todo){
-            switch(e.target.value){
-                case "all": todo.style.display = "flex";
-                break;
-            }
-        });
-    }
-
-    function filterLow(e){
-        const todos = toDoList.childNodes;
-        console.log(todos);
-        todos.forEach(function(todo){
-            switch(e.target.value){
-                case "low": if(todo.classList.contains("low")){
-                    todo.style.display = "flex"
-                }else{
-                    todo.style.display = "none"
-                }
-            }
-        });
-    }
-
-    function filterMedium(e){
-        const todos = toDoList.childNodes;
-        console.log(todos);
-        todos.forEach(function(todo){
-            switch(e.target.value){
-                case "medium": if(todo.classList.contains("medium")){
-                    todo.style.display = "flex"
-                }else{
-                    todo.style.display = "none"
-                }
-            }
-        });
-    }
-
-    function filterHigh(e){
-        const todos = toDoList.childNodes;
-        console.log(todos);
-        todos.forEach(function(todo){
-            switch(e.target.value){
-                case "high": if(todo.classList.contains("high")){
-                    todo.style.display = "flex"
-                }else{
-                    todo.style.display = "none"
-                }
-            }
-        });
-    }
-
-    function filterCompleted(e){
-        const todos = toDoList.childNodes;
-        console.log(todos);
-        todos.forEach(function(todo){
-            switch(e.target.value){
-                case "completed": if(todo.classList.contains("completed")){
-                    todo.style.display = "flex"
-                }else{
-                    todo.style.display = "none"
-                }
-            }
-        });
-    }
 
     function filterAllToDos(e){
         const todos = toDoList.childNodes;
@@ -160,17 +91,6 @@
             }
         });
     }
-
-    // function saveToDos(task ,priority){
-    //     let todos;
-    //     if(localStorage.getItem('todos') === null){
-    //         todos = [];
-    //     }else{
-    //         todos = JSON.parse(localStorage.getItem("todos"));
-    //     }
-    //     todos.push(task, priority);
-    //     localStorage.setItem("todos", JSON.stringify(todos));
-    // }
 
 
 
