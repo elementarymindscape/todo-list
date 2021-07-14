@@ -12,7 +12,7 @@
 
         .heading h2{
             font-size: 60px;
-            margin-top: 3rem;
+            margin-top: 2rem;
             font-family: "Permanent Marker", sans-serif;
             text-decoration: underline;
         }
@@ -74,7 +74,7 @@
             margin: 0.15rem;
             background: white;
             color: black;
-            font-size: 1rem;
+            font-size: 1.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -135,18 +135,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 4rem;
+            margin-top: 1.5rem;
         }
 
         .filter-heading h2{
             font-size: 35px;
-            margin-top: 3rem;
+            margin-top: 1.5rem;
             font-family: "Permanent Marker", sans-serif;
             text-decoration: underline;
         }
 
         .low-button, .medium-button, .high-button, .all-tasks, .completed-btn{
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             padding: 0.5rem;    
             background-color: white;
             border: none;
@@ -217,6 +217,8 @@
 
 
         footer{
-            margin-top: 3.4rem;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
             font-family: "Otomanopee One", sans-serif;
         }
