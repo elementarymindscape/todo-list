@@ -1,12 +1,15 @@
+        html{
+            height: 100%;
+        }
+        
         *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body{
             /* background: linear-gradient(#df8f21ee,#f8d53b,#9b5a00); */
-            min-height: 100vh;
+            min-height: 100%;
             font-family: "Cairo", sans-serif;
         }   
 
@@ -18,6 +21,8 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
         }
 
         .heading{
@@ -242,9 +247,7 @@
         }
 
 
-        footer{
-            width: 100%;
-            position: fixed;
-            bottom: 0;
+        .footer{
+            margin-top: auto;
             font-family: "Play", sans-serif;
         }
