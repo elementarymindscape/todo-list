@@ -1,253 +1,318 @@
-        html{
-            height: 100%;
-        }
-        
-        *{
-            margin: 0;
-            padding: 0;
-        }
+html{
+    height: 100%;
+}
 
-        body{
-            /* background: linear-gradient(#df8f21ee,#f8d53b,#9b5a00); */
-            min-height: 100%;
-            font-family: "Cairo", sans-serif;
-        }   
+*{
+    margin: 0;
+    padding: 0;
+}
 
-        .wrapper{
-            max-width: 100%;
-            min-height: 100vh;
-            /* background-image: url("img3.jpg"); */
-            background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('imgbg1.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-        }
+body{
+    /* background: linear-gradient(#df8f21ee,#f8d53b,#9b5a00); */
+    min-height: 100%;
+    font-family: "Cairo", sans-serif;
+}   
 
-        .heading{
-            padding: 10px;
-            display: flex;
-            align-items: baseline;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        
-        .heading i{
-            color: #0ff;
-        }
+.wrapper{
+    max-width: 100%;
+    min-height: 100vh;
+    /* background-image: url("img3.jpg"); */
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('imgbg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
 
-        .heading h2{
-            color: #0ff;
-            font-size: 50px;
-            margin-top: 1rem;
-            font-family: "Play", sans-serif;
-        }
+.heading{
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
-        header h3{
-            font-family: "Play", sans-serif;
-        }
-        
+.heading i{
+    color: #0ff;
+}
 
-         form{
-            min-height: 25vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0.5rem;
-        }
+.heading h2{
+    color: #0ff;
+    font-size: 50px;
+    margin-top: 1rem;
+    font-family: "Play", sans-serif;
+}
 
-        form input, form button{
-            padding: 0.55rem;
-            font-size: 1.5rem;  
-            background-color: white;
-            border: none;
-        }
+header h3{
+    font-family: "Play", sans-serif;
+}
 
-        form button{
-            color: black;
-            background: white;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
+ form{
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
 
-        form button:hover{
-            color: black;
-            background: #cfccca;
-        }
+form input, form button{
+    padding: 0.55rem;
+    font-size: 1.5rem;  
+    background-color: white;
+    border: none;
+}
 
-        .container{
-            margin-top: 4rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+form button{
+    color: black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+form button:focus{
+    outline: none;
+}
 
-        .List{
-            padding: 0;
-            min-width: 30%;
-            list-style: none;
-        }
-
-        .toDo{
-            margin-bottom: 2rem;
-            padding: 0 0.25rem;
-            margin: 0.15rem;
-            background: white;
-            color: black;
-            font-size: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.5s ease;
-        }
-
-         .low{
-            background: #0f0;
-        }
-
-         .medium{
-            background: #ffbf00;
-        }
-
-        .high{
-            background: #f00;
-        }
-
-        .toDo li{
-            flex: 1;
-        }
-
-        .complete-button, .delete-button{
-            border: none;
-            padding: 1.5rem;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .delete-button{
-            color: black;
-        }
-
-        .complete-button{
-            color: white;
-            background-color: #00f;
-        }
-
-        .toDo-Item{
-            padding: 0 0.5rem;
-        }
-
-        .fa-check, .fa-trash{
-            pointer-events: none;
-        }
-
-        .completed{
-            text-decoration: line-through;
-            opacity: 0.4;
-        }
-
-        .deleteAnim{
-            transform: translateY(80vh) rotateZ(30deg);
-            opacity: 0.4;
-        }
-
-        button{
-            font-family: "Play", sans-serif;
-        }
-
-        .filter-buttons{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1.5rem;
-        }
-
-        .filter-heading h2{
-            color: #0ff;
-            letter-spacing: 2px;
-            font-size: 40px;
-            margin-top: 1.5rem;
-            font-family: "Play", sans-serif;
-        }
-
-        .low-button, .medium-button, .high-button, .all-tasks, .completed-btn{
-            display: flex;
-            margin-bottom: 4rem;  
-            font-size: 12px;
-            letter-spacing: 1.5px;
-            margin-right: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 8px 18px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-family: "Play", sans-serif;
-        }
+form button:hover{
+    color: black;
+    background: #cfccca;
+}
 
 
-        .all-tasks:hover{
-            color: #fff;
-           background-color: #00f;
-        }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .completed-btn:hover{
-            color: #fff;
-           background-color: #f0f;
-        }
+.List{
+    padding: 0;
+    min-width: 30%;
+    list-style: none;
+}
 
-       .low-button:hover{
-           color: #fff;
-           background-color: #0f0;
-       }
+.toDo{
+    margin-bottom: 2rem;
+    padding: 0 0.25rem;
+    margin: 0.15rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
 
-       .medium-button:hover{
-        color: #fff;
-        background-color: #ffbf00;
-     }
+ .low{
+    background: #0f0;
+}
 
-        .high-button:hover{
-        color: #fff ;
-        background-color: red;
-        }
+ .medium{
+    background: #ffbf00;
+}
 
-        select{
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            outline: none;
-            border: none;
-        }
+.high{
+    background: #f00;
+}
 
-        .select{
-            margin: 0;
-            position: relative;
-            overflow: hidden;
+.toDo li{
+    flex: 1;
+}
 
-        }
+.complete-button, .delete-button{
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
-        select{
-            cursor: pointer;
-            width: 8rem;
-            padding: 0.92rem;
-        }
+.delete-button{
+    color: black;
+}
 
-        .select::after{
-            background: #ff0;
-            color: black;
-            content: "\25BC";
-            position: absolute;
-            top: -4px;
-            right: 0;
-            padding: 1rem;
-            pointer-events: none;
-        }
+.complete-button{
+    color: white;
+    background-color: #00f;
+}
 
-        .select:hover::after{
-            background: #cfccca;  
-        }
+.toDo-Item{
+    padding: 0 0.5rem;
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.deleteAnim{
+    transform: translateY(80vh) rotateZ(30deg);
+    opacity: 0.4;
+}
+
+button{
+    font-family: "Play", sans-serif;
+}
 
 
-        .footer{
-            margin-top: auto;
-            font-family: "Play", sans-serif;
-        }
+.filter-heading h2{
+    color: #0ff;
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin-top: 1.5rem;
+    font-family: "Play", sans-serif;
+}
+.filter-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-direction: column;
+}
+.filter-buttons1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-buttons2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.low-button, .medium-button, .all-tasks{
+    display: flex;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Play", sans-serif;
+}
+.high-button, .completed-btn{
+    margin: 10px 0;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Play", sans-serif;
+}
+
+
+.all-tasks:hover{
+    color: #fff;
+   background-color: #00f;
+}
+
+.completed-btn:hover{
+    color: #fff;
+   background-color: #f0f;
+}
+
+.low-button:hover{
+   color: #fff;
+   background-color: #0f0;
+}
+
+.medium-button:hover{
+color: #fff;
+background-color: #ffbf00;
+}
+
+.high-button:hover{
+color: #fff ;
+background-color: red;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 8rem;
+    padding: 0.92rem;
+}
+
+.select{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.select::after{
+    background: #ff0;
+    color: black;
+    content: "\25BC";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background: #cfccca;  
+}
+
+
+.footer{
+    margin-top: auto;
+    font-family: "Play", sans-serif;
+}
+
+@media screen and (max-width: 370px){
+
+    form{
+        min-height: 15vh;
+    }
+
+    form input, form button{
+        padding: 0.25;
+        font-size: 0.75rem;  
+        background-color: white;
+        border: none;
+    }
+
+    form input:focus{
+        outline: none;
+    }
+    
+    select{
+        width: 8rem;
+        padding: 0.35rem;
+    }
+
+    .select::after{
+        background: #ff0;
+        color: black;
+        content: "\25BC";
+        position: absolute;
+        top: -2px;
+        right: 0;
+        padding: 0.5rem;
+        pointer-events: none;
+    }
+
+    .complete-button, .delete-button{
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-size: 0.5rem;
+        height: 40px;
+        width: 40px;
+    }
+
+}
