@@ -273,7 +273,7 @@ select{
     font-family: "Play", sans-serif;
 }
 
-@media screen and (max-width: 370px){
+@media screen and (min-width: 360px){
 
     form{
         min-height: 15vh;
